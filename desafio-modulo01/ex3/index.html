@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function temHabilidade (skills){
+                for (let index = 0; index < skills.length; index++){
+                    if(skills[index] === 'Javascript')
+                        return true
+                }
+                return false
+            }
+
+            var skills = ['React Native', 'ReactJS', 'Javascript'];
+            console.log(temHabilidade(skills)); 
+        </script>
+    </body>
+</html>
