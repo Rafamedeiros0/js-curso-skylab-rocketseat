@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Curso Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            var inputElement1 = document.getElementById('nome');
+            var inputElement2 = document.getElementsByTagName('input')[0]; //retorna um vetor porque posso ter mais de 1inputs
+            var inputElement3 = document.getElementsByClassName('nome')[0];
+            
+            //melhor forma segundo diego
+            //retorna apenas um elemento
+            var inputElement4 = document.querySelector('body div#app input'); //posso remover o body pq sempre tudo vai estar dentro do body ??? 
+            var inputElement5 = document.querySelector('input[name=nome]');
+            //querySelectorAll
+            var inputElement6 = document.querySelectorAll('body div#app input');
+
+            console.log(inputElement6);
+
+            var inputElement = document.querySelector('input[name=nome]');
+
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function(){
+                var text = inputElement.value;
+                alert(text);
+            }
+        </script>
+    </body>
+</html>
